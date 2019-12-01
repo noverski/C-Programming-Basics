@@ -1,0 +1,101 @@
+/***********************************************/
+/*Author : Ajay varghese			/*
+/*Date: 15th August 2018			/*
+/*Purpose: Assignement Question 1		/*
+/***********************************************/
+
+#include <stdio.h>
+// get function from the libary
+
+int main()
+{
+    /*-----------------------------------------------*/
+    /*declaration and initialise the working storage*/
+    /*-----------------------------------------------*/
+
+    //input values of three sides of triangle
+    int SideA = 0 ; // Side A of the triangle
+    int SideB = 0 ; // Side B of the triangle
+    int SideC = 0 ; // Side C of the triangle
+    int valid = 0 ; // used to validate the triangle
+    int triangle = 0 ; //get the triangle sides
+
+    //Heading/Title  
+    printf("Please enter the values for the following sides\n");
+    printf("\n"); 
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side A*/
+    /*-----------------------------------------------*/
+    printf("Value of Side A :");
+    scanf("%d",&SideA);
+            
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side B*/
+    /*-----------------------------------------------*/
+    printf("Value of Side B :");
+    scanf("%d",&SideB);
+        
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side C*/
+    /*-----------------------------------------------*/
+    printf("Value of Side C :");
+    scanf("%d",&SideC);
+    printf("\n"); 
+
+    //================================================================
+    /*-----------------------------------------------*/
+    /*Validate the traingle */
+    /*-----------------------------------------------*/
+    if ((SideA + SideB)>=SideC)
+      {
+        if ((SideB + SideC)>=SideA)
+          {
+            if ((SideA+SideC)>=SideB)
+            {
+              valid = 1; //if true value change form 0 to 1
+            }
+          }
+      }
+    else
+        valid = 0; //if true value change form 0 to 1
+      
+   
+    /*-----------------------------------------------*/
+    /* Print if traingle valid or invalid */
+    /*-----------------------------------------------*/
+    if (valid = 1)
+     {
+       printf("Triangle is Valid\n");
+      }
+    else
+        printf("Triangle is Invalid\n");
+      
+
+//==================================================================
+    /*-----------------------------------------------*/
+    /* Check if Triangle is Equal, scal or iso */
+    /*-----------------------------------------------*/
+    if ((SideA==SideB) && (SideB==SideC)) //Logical ops. Right side of && 
+      {
+        printf("This is a equilateral triangle\n"); // All sides are equal
+      }
+    else if (SideA==SideB || SideB==SideC || SideA==SideC)
+    {
+        printf("This is a isosceles triangle\n"); //If any of the two sides are equal
+      }
+    else 
+      {
+        printf("This is a scalene triangle\n"); //If none of the sides are equal
+      }
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*systems to print end program statement        */
+    /*-----------------------------------------------*/
+    printf("\n<End Program>"); 
+
+    return (0);
+}
+

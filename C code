@@ -1,0 +1,317 @@
+
+
+/***********************************************/
+/*Author : Ajay Varghese			/*
+/*Murdoch ID : 33507753		    	        /*
+/*Date: 15th August 2018			/*
+/*Purpose: Assignment Question 1		/*
+/***********************************************/
+
+#include <stdio.h>
+// get function from the libary
+
+int main()
+{
+    /*-----------------------------------------------*/
+    /*declaration and initialise the working storage*/
+    /*-----------------------------------------------*/
+
+    //input values of three sides of triangle
+    int SideA = 0 ; // Side A of the triangle
+    int SideB = 0 ; // Side B of the triangle
+    int SideC = 0 ; // Side C of the triangle
+    int valid = 0 ; // used to validate the triangle
+    int triangle = 0 ; //get the triangle sides
+
+    //Print HeadingTitle  
+    printf("Please enter the values for the following sides\n");
+    printf("\n"); 
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side A*/
+    /*-----------------------------------------------*/
+    printf("Value of Side A :");
+    scanf("%d",&SideA);
+            
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side B*/
+    /*-----------------------------------------------*/
+    printf("Value of Side B :");
+    scanf("%d",&SideB);
+        
+    /*-----------------------------------------------*/
+    /*input value for Triangle Side C*/
+    /*-----------------------------------------------*/
+    printf("Value of Side C :");
+    scanf("%d",&SideC);
+    printf("\n"); 
+
+    //================================================================
+    /*-----------------------------------------------*/
+    /*Validate the traingle */
+    /*-----------------------------------------------*/
+    if ((SideA + SideB)>=SideC)
+      {
+        if ((SideB + SideC)>=SideA)
+          {
+            if ((SideA+SideC)>=SideB)
+            {
+              valid = 1; //if true value change form 0 to 1
+            }
+          }
+      }
+    else
+        valid = 0; //if true value change form 0 to 1
+      
+   
+    /*-----------------------------------------------*/
+    /* Print if traingle valid or invalid */
+    /*-----------------------------------------------*/
+    if (valid = 1)
+     {
+       printf("Triangle is Valid\n");
+      }
+    else
+        printf("Triangle is Invalid\n");
+      
+
+//==================================================================
+    /*-----------------------------------------------*/
+    /* Check if Triangle is Equal, scal or iso */
+    /*-----------------------------------------------*/
+    if ((SideA==SideB) && (SideB==SideC)) //Logical ops. Right side of && 
+      {
+        printf("This is a equilateral triangle\n"); // All sides are equal
+      }
+    else if (SideA==SideB || SideB==SideC || SideA==SideC)
+    {
+        printf("This is a isosceles triangle\n"); //If any of the two sides are equal
+      }
+    else 
+      {
+        printf("This is a scalene triangle\n"); //If none of the sides are equal
+      }
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*systems to print end program statement        */
+    /*-----------------------------------------------*/
+    printf("\n<End Program>"); 
+
+    return (0);
+}
+
+
+
+================================================================================================================================
+
+
+/***********************************************/
+/*Author : Ajay Varghese                        /*
+/*Murdoch ID : 33507753		    	        /*
+/*Date: 15th August 2018			/*
+/*Purpose: Assignment Question 2		/*
+/***********************************************/
+
+#include <stdio.h>
+// get function from the libary
+
+int main()
+{
+  /*-----------------------------------------------*/
+  /*declaration and initialise the working storage*/
+  /*-----------------------------------------------*/
+
+  int change = 0 ; //shows the value in the input in cents
+  int balance = 0; //remainder values
+  int getfifty = 0; //50 cents
+  int gettwenty = 0; //20 cents
+  int getten = 0; //10 cents
+  int getfive = 0; //5 cents
+  int getone = 0; // 1 cent
+    
+
+  /*-----------------------------------------------*/
+  //Initial Heading
+  printf("Please enter the value for change.\nBetween 5 - 95 cents");
+  printf("\n"); 
+  printf("\n"); 
+
+  //=============================================================
+  /*-----------------------------------------------*/
+  /*Bank teller key in the value*/
+  /*-----------------------------------------------*/
+  printf("Amount :");
+  scanf("%d",&change);
+  
+  //============================================================
+  /*-----------------------------------------------*/
+  /*systems shows teller its value cents required coins */
+  /*-----------------------------------------------*/  
+  printf("Change to give is %d cents\n\n",change);
+
+  //=============================================================
+  /*-----------------------------------------------*/
+  /*systems shows tell its exact change required  */
+  /*-----------------------------------------------*/
+
+  getfifty = change/50; //indicates the numerical qty of 50 cents required
+    printf("%d X 50 cents = %d\n", getfifty,(getfifty*50));//print value
+  balance = change%50; //balance value from 50 cent change
+
+  gettwenty = balance/20; //indicates the numerical qty of 20 cents required
+    printf("%d X 20 cents = %d\n", gettwenty,(gettwenty*20));//print value
+  balance = balance%20;  //balance value from 20 cent change
+
+  getten = balance/10; //indicates the numerical qty of 10 cents required
+    printf("%d X 10 cents = %d\n", getten,(getten*10));//print value
+  balance = balance%10;  //balance value from 10 cent change
+
+  getfive=balance/5; //indicates the numerical qty of 5 cents required
+    printf("%d X 5 cents = %d\n", getfive,(getfive*5));//print value
+
+  //=============================================================
+  /*-----------------------------------------------*/
+  /*systems to print end program statement        */
+  /*-----------------------------------------------*/
+  printf("\n<End Program>"); 
+
+return 0;
+}
+
+
+============================================================================================================================
+
+
+/***********************************************/
+/*Author : Ajay Varghese			/*
+/*Murdoch ID : 33507753		    	        /*
+/*Date: 15th August 2018			/*
+/*Purpose: Assignment Question 3		/*
+/***********************************************/
+
+#include <stdio.h>
+// get function from the libary
+
+int main()
+{
+    /*-----------------------------------------------*/
+    /*declaration and initialise the working storage*/
+    /*-----------------------------------------------*/
+
+    float change = 0 ; //shows the value in the input in cents
+    int remaindollar = 0; // value of the remaining dollars
+    int remaincent = 0; //value of remaining cents
+    int balance = 0; //remainder values
+
+    int dollarhundred = 0; //value of hundred dollar
+    int dollarfifty = 0;//value of hundred dollar
+    int dollartwenty = 0;//value of hundred dollar
+    int dollarten = 0 ;//value of hundred dollar
+    int dollarfive = 0;//value of hundred dollar
+    int dollartwo = 0;//value of hundred dollar
+    int dollarone = 0;//value of hundred dollar
+
+    int centfifty = 0; //50 cents
+    int centtwenty = 0; //20 cents
+    int centten = 0; //10 cents
+    int centfive = 0; //5 cents
+    int centone = 0; // 1 cent
+        
+
+    /*-----------------------------------------------*/
+    //Initial Heading
+    printf("Please enter the value for change.\n");
+    printf("\n"); 
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*Bank teller key in the value*/
+    /*-----------------------------------------------*/
+    printf("Amount :");
+    scanf("%f",&change);
+    
+    //============================================================
+    /*-----------------------------------------------*/
+    /*systems to seperate the dollars and cents */
+    /*-----------------------------------------------*/  
+    remaindollar=(int)change ;//changing float value into interger value 
+    remaincent=(int)(((change-remaindollar)*100)+0.5) ;//
+    
+    printf("Dollar Amount : %d\n",remaindollar) ;//
+    printf("Cents Amount : %d\n",remaincent) ;//
+    printf("\n") ;
+    
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*systems to break down down dollar  into cents tell its exact change required  */
+    /*-----------------------------------------------*/
+    printf("Change to give for Dollar\n",change);
+
+    dollarhundred = remaindollar/100; //indicates the numerical qty of 50 cents required
+        printf("%d X $100  = %d\n", dollarhundred,(dollarhundred*100));//print value
+    balance = remaindollar%100; //balance value from 50 cent change
+
+    dollarfifty = balance/50; //indicates the numerical qty of 20 cents required
+        printf("%d X $50  = %d\n", dollarfifty,(dollarfifty*50));//print value
+    balance = balance%50;  //balance value from 20 cent change
+
+    dollartwenty = balance/20; //indicates the numerical qty of 20 cents required
+        printf("%d X $20  = %d\n", dollartwenty,(dollartwenty*20));//print value
+    balance = balance%20;  //balance value from 20 cent change
+
+    dollarten = balance/10; //indicates the numerical qty of 10 cents required
+        printf("%d X $10  = %d\n", dollarten,(dollarten*10));//print value
+    balance = balance%10;  //balance value from 10 cent change
+
+    dollarfive=balance/5; //indicates the numerical qty of 5 cents required
+        printf("%d X $5 = %d\n", dollarfive,(dollarfive*5));//print value
+    balance = balance%5;  //balance value from 5 cent change
+
+    dollartwo=balance/2; //indicates the numerical qty of 5 cents required
+        printf("%d X $2 = %d\n", dollartwo,(dollartwo*2));//print value
+    balance = balance%2;  //balance value from 5 cent change
+    
+    dollarone=balance/1; //indicates the numerical qty of 5 cents required
+        printf("%d X $1 = %d\n", dollarone,(dollarone*1));//print value
+    balance = balance%1;  //balance value from 5 cent change
+ 
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*systems to break cents tell its exact change required  */
+    /*-----------------------------------------------*/
+
+    printf("\nChange to give for Cents\n",change);
+
+    centfifty = remaincent/50; //indicates the numerical qty of 50 cents required
+        printf("%d X 50 cents = %d\n", centfifty,(centfifty*50));//print value
+    balance = remaincent%50; //balance value from 50 cent change
+
+    centtwenty = balance/20; //indicates the numerical qty of 20 cents required
+        printf("%d X 20 cents = %d\n", centtwenty,(centtwenty*20));//print value
+    balance = balance%20;  //balance value from 20 cent change
+
+    centten = balance/10; //indicates the numerical qty of 10 cents required
+        printf("%d X 10 cents = %d\n", centten,(centten*10));//print value
+    balance = balance%10;  //balance value from 10 cent change
+
+    centfive=balance/5; //indicates the numerical qty of 5 cents required
+        printf("%d X 5 cents = %d\n", centfive,(centfive*5));//print value
+    balance = balance%5;  //balance value from 5 cent change
+
+
+    //=============================================================
+    /*-----------------------------------------------*/
+    /*systems to print end program statement        */
+    /*-----------------------------------------------*/
+    printf("\n<End Program>"); 
+
+
+return 0;
+}
+
+=============================================================================================================================
+
+
+
